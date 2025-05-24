@@ -22,14 +22,14 @@ v0=2
 
 while sim.getSimulationState() != sim.simulation_stopped:
     # # Get the position and orientation of the Pioneer robot
-    # pioneer_position = sim.getObjectPosition(pioneer, -1)
-    # pioneer_orientation = sim.getObjectOrientation(pioneer, -1)
+    pioneer_position = sim.getObjectPosition(robot, -1)
+    pioneer_orientation = sim.getObjectOrientation(robot, -1)
 
     
 
     # Print the position and orientation
-    # print("Position:", pioneer_position)
-    # print("Orientation:", pioneer_orientation)
+    print("Position:", pioneer_position)
+    print("Orientation:", pioneer_orientation)
     for i in range(0,16):
         res, dist, _, _, _ = sim.readProximitySensor(usensors[i])
 
